@@ -1,0 +1,16 @@
+分词器初始化完成。词汇表大小: 10004
+加载并拼接完成，文本长度：108021386字符
+开始对全部文本进行编码...
+文本编码完成。总 Token 数量: 25591695
+Traceback (most recent call last):
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 230, in <module>
+    'use_wandb': True,  # 是否启用W&B
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 155, in train_process
+    train_token_ids = all_token_ids[:split_idx]
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 230, in <module>
+    'use_wandb': True,  # 是否启用W&B
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 155, in train_process
+    train_token_ids = all_token_ids[:split_idx]
+KeyboardInterrupt

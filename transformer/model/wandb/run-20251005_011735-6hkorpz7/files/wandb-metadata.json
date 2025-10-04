@@ -1,0 +1,36 @@
+{
+  "os": "Windows-10-10.0.26100-SP0",
+  "python": "CPython 3.9.21",
+  "startedAt": "2025-10-04T23:17:35.974069Z",
+  "program": "C:\\Users\\Ruizhe\\Desktop\\Study\\Code\\AI\\transformer\\model\\train.py",
+  "codePath": "train.py",
+  "codePathLocal": "train.py",
+  "email": "li1872156233@outlook.com",
+  "root": "C:\\Users\\Ruizhe\\Desktop\\Study\\Code\\AI\\transformer\\model",
+  "host": "DESKTOP-FN92J53",
+  "executable": "E:\\Software\\Python_env\\Anaconda3\\envs\\hf_LLM_env\\python.exe",
+  "cpu_count": 8,
+  "cpu_count_logical": 16,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "gpu_count": 1,
+  "disk": {
+    "/": {
+      "total": "424194076672",
+      "used": "264235556864"
+    }
+  },
+  "memory": {
+    "total": "33599344640"
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+      "memoryTotal": "8585740288",
+      "cudaCores": 3072,
+      "architecture": "Ada",
+      "uuid": "GPU-32653202-3ebd-47a1-0f37-25b948c20aa4"
+    }
+  ],
+  "cudaVersion": "12.8",
+  "writerId": "d04a0ocedq59s685pnfu3e7n9gnb6t0q"
+}

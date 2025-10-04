@@ -1,0 +1,31 @@
+分词器初始化完成。词汇表大小: 10004
+加载并拼接完成，文本长度：99528字符
+开始对全部文本进行编码...
+文本编码完成。总 Token 数量: 23296
+已创建 23196 个训练样本，每个长度为 100
+真实数据 DataLoader 已准备好
+模型已创建并移动到 cuda
+模型总参数量: 57,904,916
+
+--- 开始使用真实数据进行训练 ---
+Training:   4%|█████████▊                                                                                                                                                                                                                                              | 26/653 [00:05<02:21,  4.43it/s]
+Traceback (most recent call last):
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 230, in <module>
+    train_process(config)
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 198, in train_process
+    trainer.train(num_epochs=config['num_epochs'], train_loader=train_loader, val_loader=val_loader)
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 83, in train
+    train_loss = self._train_epoch(train_loader)
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 61, in _train_epoch
+    epoch_loss += loss.item()
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 230, in <module>
+    train_process(config)
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 198, in train_process
+    trainer.train(num_epochs=config['num_epochs'], train_loader=train_loader, val_loader=val_loader)
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 83, in train
+    train_loss = self._train_epoch(train_loader)
+  File "C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\train.py", line 61, in _train_epoch
+    epoch_loss += loss.item()
+KeyboardInterrupt

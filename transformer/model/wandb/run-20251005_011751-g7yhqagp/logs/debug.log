@@ -1,0 +1,22 @@
+2025-10-05 01:17:51,824 INFO    MainThread:26144 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-05 01:17:51,825 INFO    MainThread:26144 [wandb_setup.py:_flush():81] Configure stats pid to 26144
+2025-10-05 01:17:51,825 INFO    MainThread:26144 [wandb_setup.py:_flush():81] Loading settings from C:\Users\Ruizhe\.config\wandb\settings
+2025-10-05 01:17:51,825 INFO    MainThread:26144 [wandb_setup.py:_flush():81] Loading settings from C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\wandb\settings
+2025-10-05 01:17:51,825 INFO    MainThread:26144 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-05 01:17:51,825 INFO    MainThread:26144 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\wandb\run-20251005_011751-g7yhqagp\logs\debug.log
+2025-10-05 01:17:51,825 INFO    MainThread:26144 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\wandb\run-20251005_011751-g7yhqagp\logs\debug-internal.log
+2025-10-05 01:17:51,826 INFO    MainThread:26144 [wandb_init.py:init():832] calling init triggers
+2025-10-05 01:17:51,826 INFO    MainThread:26144 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'vocab_path': '../tokenizer/vocab_test_set.npy', 'data_path': 'C:\\Users\\Ruizhe\\Desktop\\Study\\ID2221\\Project\\Data\\pubmedqa\\ori_pqau.json', 'save_path': 'best_model.pt', 'use_wandb': True, 'wandb_project': 'pubmedqa-training', 'wandb_run_name': 'run-20251005-011751', 'vocab_size': None, 'pad_idx': None, 'context_lengh': 1000000000, 'd_model': 768, 'num_heads': 8, 'num_layers': 6, 'd_ff': 3072, 'max_len': 100, 'dropout': 0.1, 'batch_size': 32, 'learning_rate': 0.0001, 'num_epochs': 5, '_wandb': {}}
+2025-10-05 01:17:51,826 INFO    MainThread:26144 [wandb_init.py:init():880] starting backend
+2025-10-05 01:17:52,053 INFO    MainThread:26144 [wandb_init.py:init():883] sending inform_init request
+2025-10-05 01:17:52,072 INFO    MainThread:26144 [wandb_init.py:init():891] backend started and connected
+2025-10-05 01:17:52,074 INFO    MainThread:26144 [wandb_init.py:init():961] updated telemetry
+2025-10-05 01:17:52,077 INFO    MainThread:26144 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-05 01:17:52,654 INFO    MainThread:26144 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-05 01:17:52,827 INFO    MainThread:26144 [wandb_run.py:_console_start():2506] atexit reg
+2025-10-05 01:17:52,827 INFO    MainThread:26144 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-10-05 01:17:52,828 INFO    MainThread:26144 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-10-05 01:17:52,828 INFO    MainThread:26144 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-10-05 01:17:52,831 INFO    MainThread:26144 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-05 01:17:52,832 INFO    MainThread:26144 [wandb_run.py:_config_callback():1392] config_cb None None {'device': 'cuda'}

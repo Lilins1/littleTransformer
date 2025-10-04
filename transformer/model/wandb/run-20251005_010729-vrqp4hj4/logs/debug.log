@@ -1,0 +1,59 @@
+2025-10-05 01:07:29,476 INFO    MainThread:26292 [wandb_setup.py:_flush():81] Current SDK version is 0.22.1
+2025-10-05 01:07:29,478 INFO    MainThread:26292 [wandb_setup.py:_flush():81] Configure stats pid to 26292
+2025-10-05 01:07:29,478 INFO    MainThread:26292 [wandb_setup.py:_flush():81] Loading settings from C:\Users\Ruizhe\.config\wandb\settings
+2025-10-05 01:07:29,478 INFO    MainThread:26292 [wandb_setup.py:_flush():81] Loading settings from C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\wandb\settings
+2025-10-05 01:07:29,478 INFO    MainThread:26292 [wandb_setup.py:_flush():81] Loading settings from environment variables
+2025-10-05 01:07:29,478 INFO    MainThread:26292 [wandb_init.py:setup_run_log_directory():705] Logging user logs to C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\wandb\run-20251005_010729-vrqp4hj4\logs\debug.log
+2025-10-05 01:07:29,479 INFO    MainThread:26292 [wandb_init.py:setup_run_log_directory():706] Logging internal logs to C:\Users\Ruizhe\Desktop\Study\Code\AI\transformer\model\wandb\run-20251005_010729-vrqp4hj4\logs\debug-internal.log
+2025-10-05 01:07:29,479 INFO    MainThread:26292 [wandb_init.py:init():832] calling init triggers
+2025-10-05 01:07:29,479 INFO    MainThread:26292 [wandb_init.py:init():837] wandb.init called with sweep_config: {}
+config: {'vocab_path': '../tokenizer/vocab_test_set.npy', 'data_path': 'C:\\Users\\Ruizhe\\Desktop\\Study\\ID2221\\Project\\Data\\pubmedqa\\ori_pqau.json', 'save_path': 'best_model.pt', 'use_wandb': True, 'wandb_project': 'pubmedqa-training', 'wandb_run_name': 'run-20251005-010729', 'vocab_size': None, 'pad_idx': None, 'context_lengh': 1000000000, 'd_model': 768, 'num_heads': 8, 'num_layers': 6, 'd_ff': 3072, 'max_len': 100, 'dropout': 0.1, 'batch_size': 32, 'learning_rate': 0.0001, 'num_epochs': 5, '_wandb': {}}
+2025-10-05 01:07:29,479 INFO    MainThread:26292 [wandb_init.py:init():880] starting backend
+2025-10-05 01:07:29,719 INFO    MainThread:26292 [wandb_init.py:init():883] sending inform_init request
+2025-10-05 01:07:29,738 INFO    MainThread:26292 [wandb_init.py:init():891] backend started and connected
+2025-10-05 01:07:29,739 INFO    MainThread:26292 [wandb_init.py:init():961] updated telemetry
+2025-10-05 01:07:29,742 INFO    MainThread:26292 [wandb_init.py:init():985] communicating run to backend with 90.0 second timeout
+2025-10-05 01:07:30,311 INFO    MainThread:26292 [wandb_init.py:init():1036] starting run threads in backend
+2025-10-05 01:07:30,491 INFO    MainThread:26292 [wandb_run.py:_console_start():2506] atexit reg
+2025-10-05 01:07:30,491 INFO    MainThread:26292 [wandb_run.py:_redirect():2354] redirect: wrap_raw
+2025-10-05 01:07:30,491 INFO    MainThread:26292 [wandb_run.py:_redirect():2423] Wrapping output streams.
+2025-10-05 01:07:30,492 INFO    MainThread:26292 [wandb_run.py:_redirect():2446] Redirects installed.
+2025-10-05 01:07:30,496 INFO    MainThread:26292 [wandb_init.py:init():1076] run started, returning control to user process
+2025-10-05 01:07:30,498 INFO    MainThread:26292 [wandb_run.py:_config_callback():1392] config_cb None None {'device': 'cuda'}
+2025-10-05 01:14:23,561 INFO    wandb-AsyncioManager-main:26292 [service_client.py:_forward_responses():80] Reached EOF.
+2025-10-05 01:14:23,564 INFO    wandb-AsyncioManager-main:26292 [mailbox.py:close():137] Closing mailbox, abandoning 1 handles.
+2025-10-05 01:14:24,879 ERROR   MainThread:26292 [redirect.py:_on_write():664] [all runs] error in stdout callback
+Traceback (most recent call last):
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\lib\redirect.py", line 662, in _on_write
+    cb(written_data)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\wandb_run.py", line 2427, in <lambda>
+    lambda data: self._console_raw_callback("stdout", data),
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\wandb_run.py", line 399, in wrapper
+    return func(self, *args, **kwargs)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\wandb_run.py", line 457, in wrapper_fn
+    return func(self, *args, **kwargs)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\wandb_run.py", line 1595, in _console_raw_callback
+    self._backend.interface.publish_output_raw(name, data)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\interface\interface.py", line 802, in publish_output_raw
+    self._publish_output_raw(o)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\interface\interface_shared.py", line 37, in _publish_output_raw
+    self._publish(rec)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\interface\interface_sock.py", line 43, in _publish
+    self._asyncer.run(lambda: self._client.publish(request))
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 136, in run
+    return future.result()
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\concurrent\futures\_base.py", line 446, in result
+    return self.__get_result()
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\concurrent\futures\_base.py", line 391, in __get_result
+    raise self._exception
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\lib\asyncio_manager.py", line 219, in _wrap
+    return await fn()
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 38, in publish
+    await self._send_server_request(request)
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\site-packages\wandb\sdk\lib\service\service_client.py", line 64, in _send_server_request
+    await self._writer.drain()
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\asyncio\streams.py", line 387, in drain
+    await self._protocol._drain_helper()
+  File "E:\Software\Python_env\Anaconda3\envs\hf_LLM_env\lib\asyncio\streams.py", line 190, in _drain_helper
+    raise ConnectionResetError('Connection lost')
+ConnectionResetError: Connection lost
