@@ -12,6 +12,8 @@ import wandb
 from huggingface_hub import HfApi, login
 import time
 
+torch.autograd.set_detect_anomaly(True)
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from tokenizer.Tokenizer import BPETokenizer
 
@@ -167,17 +169,35 @@ class Trainer:
             self._upload_to_hub("training_metrics.jsonl")
 
     def _save_model(self, epoch, is_best=False):
-        save_name = f"model_epoch_{epoch}.pt" if not is_best else self.save_path
-        torch.save({
+        os.makedirs("Models", exist_ok=True)
+
+        # 生成时间戳
+        timestamp = datetime.now().strftime("%Y%m%d-%H%M%S")
+
+        if not is_best:
+            # 创建每个 epoch 的子目录
+            epoch_dir = f"Models/model_epoch_{epoch}_{timestamp}"
+            os.makedirs(epoch_dir, exist_ok=True)
+            save_name = f"{epoch_dir}/model_epoch_{epoch}_{timestamp}.pt"
+        else:
+            save_name = self.save_path  # 最佳模型保存到固定路径
+
+        save_dict = {
             'epoch': epoch,
             'model_state_dict': self.model.state_dict(),
             'optimizer_state_dict': self.optimizer.state_dict(),
-            'loss': self.best_val_loss if is_best else None,
-        }, save_name)
-        
-        if self.config['upload_to_hub']:
-            self._upload_to_hub(save_name)
-        
+        }
+        if is_best:
+            save_dict['loss'] = self.best_val_loss
+
+        torch.save(save_dict, save_name)
+
+        if self.config.get('upload_to_hub', False):
+            try:
+                self._upload_to_hub(save_name)
+            except Exception as e:
+                print(f"上传到 Hub 失败: {e}")
+
         return save_name
 
     def _train_epoch(self, train_loader, max_batches):
@@ -407,12 +427,12 @@ if __name__ == "__main__":
         
         # 训练参数
         'batch_size': 32,
-        'learning_rate': 1e-4,
-        'num_epochs': 5,
+        'learning_rate': 5e-5,
+        'num_epochs': 2,
         
         # 保存配置
         'save_interval_epochs': 1,
-        'save_interval_seconds': 3600,
+        'save_interval_seconds': 21600,
         
         # W&B和HF配置
         'use_wandb': True,
